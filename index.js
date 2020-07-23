@@ -283,7 +283,25 @@ console.log("\n");
 // Hint - you may need to study tomorrow's training kit on arrays 
 // try looking up the .includes() method
 
+function vowelsCount(inputString){
+    inputString = inputString.toLowerCase();
+    var vowelsCounter = 0;
+    const vowels = ["a" , "e" , "o" , "i" , "u"];
 
+    for(position=0; position<inputString.length; position++){
+        if(vowels.includes(inputString[position])){
+            vowelsCounter++;
+        }
+    }
+
+    return vowelsCounter;
+}
+
+var randomString = "I love APPLES and STRAWBERRIES.";
+
+console.log("Task 8 - Stretch");
+console.log("Number of vowels in \"" + randomString + "\" is " + vowelsCount(randomString));
+console.log("\n");
 
 
 
@@ -292,6 +310,57 @@ console.log("\n");
 //update your rock papers scissors code below to take a prompt from a user using the window object
 
 
+function RockPaperScissors2(inputChoice){
+
+    var choices = ["Rock" , "Paper" , "Scissors"];
+
+    var seed = Date.now();
+    var computerChoice = Math.floor(3 * Math.random(seed));
+
+    console.log("My Choice is: " + choices[inputChoice])
+    console.log("Computer Choice is: " + choices[computerChoice])
+
+    //Rock=0, Paper=1, Scissors=2
+    if (inputChoice === 0)
+    {
+        if(computerChoice == 0){
+            return "Draw!"
+        }
+        else if(computerChoice == 1){
+            return "You Lost!"
+        }
+        else if(computerChoice == 2){
+            return "You Won!"
+        }
+    }
+    else if (inputChoice === 1)
+    {
+        if(computerChoice == 0){
+            return "You Won!"
+        }
+        else if(computerChoice == 1){
+            return "Draw!"
+        }
+        else if(computerChoice == 2){
+            return "You Lost!"
+        }
+    }
+    else if (inputChoice === 2)
+    {
+        if(computerChoice == 0){
+            return "You Lost!"
+        }
+        else if(computerChoice == 1){
+            return "You Won!"
+        }
+        else if(computerChoice == 2){
+            return "Draw!"
+        }
+    }
+ } 
 
 
-
+console.log("Task 9 - Stretch");
+var myChoice = prompt("To Play, Enter 0 for Rock, 1 for Paper or 2 for Scissors");
+console.log(RockPaperScissors2(Number(myChoice)));
+console.log("\n");
