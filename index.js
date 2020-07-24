@@ -1,7 +1,7 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-var votingAge = 22;
+const votingAge = 22;
 
 if (votingAge > 18){
     console.log("Task 1a");
@@ -29,7 +29,7 @@ console.log("\n");
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
-
+2
 
 console.log("Task 1c");
 console.log(Number("1999"));
@@ -131,8 +131,8 @@ console.log("\n");
 
  function RockPaperScissors(inputChoice){
 
-    var myChoice;
-    var choices = ["Rock" , "Paper" , "Scissors"];
+    let myChoice;
+    const choices = ["Rock" , "Paper" , "Scissors"];
 
     if(inputChoice==="rock"){
         myChoice = 0;
@@ -144,8 +144,8 @@ console.log("\n");
         myChoice = 2;
     }
 
-    var seed = Date.now();
-    var computerChoice = Math.floor(3 * Math.random(seed));
+    const seed = Date.now();
+    const computerChoice = Math.floor(3 * Math.random(seed));
 
     console.log("My Choice is: " + choices[myChoice])
     console.log("Computer Choice is: " + choices[computerChoice])
@@ -226,7 +226,7 @@ console.log("\n");
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 function annoyingSong(number){
-    for(var i = number; i>0; i--){
+    for(let i = number; i>0; i--){
         console.log(i + " bottles of soda, take one down pass it around " + (i-1) + " bottles of soda on the wall");
     }
 }
@@ -247,7 +247,7 @@ console.log("\n");
 
   function gradeCalculator(gradeNumber){
     
-    var grade = parseInt(gradeNumber);
+    const grade = parseInt(gradeNumber);
 
     switch(true){
         case grade >=0 && grade < 60:
@@ -285,7 +285,7 @@ console.log("\n");
 
 function vowelsCount(inputString){
     inputString = inputString.toLowerCase();
-    var vowelsCounter = 0;
+    let vowelsCounter = 0;
     const vowels = ["a" , "e" , "o" , "i" , "u"];
 
     for(position=0; position<inputString.length; position++){
@@ -312,10 +312,10 @@ console.log("\n");
 
 function RockPaperScissors2(inputChoice){
 
-    var choices = ["Rock" , "Paper" , "Scissors"];
+    const choices = ["Rock" , "Paper" , "Scissors"];
 
-    var seed = Date.now();
-    var computerChoice = Math.floor(3 * Math.random(seed));
+    const seed = Date.now();
+    const computerChoice = Math.floor(3 * Math.random(seed));
 
     console.log("My Choice is: " + choices[inputChoice])
     console.log("Computer Choice is: " + choices[computerChoice])
@@ -361,6 +361,6 @@ function RockPaperScissors2(inputChoice){
 
 
 console.log("Task 9 - Stretch");
-var myChoice = prompt("To Play, Enter 0 for Rock, 1 for Paper or 2 for Scissors");
+const myChoice = prompt("To Play, Enter 0 for Rock, 1 for Paper or 2 for Scissors");
 console.log(RockPaperScissors2(Number(myChoice)));
 console.log("\n");
